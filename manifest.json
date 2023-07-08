@@ -1,0 +1,23 @@
+{
+    "name": "WideMusic",
+    "description": "Make Yandex Music to fill full width of screen",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {},
+    "action": {
+        "default_popup" : "popup/popup.html",
+        "default_icon": "img/icon.png"
+    },
+    "permissions": [ "scripting", "activeTab" ],
+    "background":{ },
+    "content_scripts": [
+        {
+            "js": ["scripts/script.js"],
+            "matches": [
+                "https://music.yandex.ru/users/cool.zhopy/playlists/*",
+                "https://developer.chrome.com/docs/extensions/*",
+                "https://developer.chrome.com/docs/webstore/*"
+            ]
+        }
+    ]
+}
